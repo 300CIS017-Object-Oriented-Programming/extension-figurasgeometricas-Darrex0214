@@ -16,6 +16,7 @@ Circulo::Circulo(float radio): Circulo() {
 
 void Circulo::dibujarFigura() {
     cout << nombreFigura;
+    cout <<"\n";
     for(int i = 0; i <= 10; i++){
         for(int j = 0; j <= 10; j++){
             if(pow(j - 5, 2.0) + pow(i - 5, 2.0) <= pow(5, 2.0)){

@@ -10,6 +10,7 @@
 #include "../Model/Rectangulo.h"
 #include "../Model/Rombo.h"
 #include "../Model/FiguraGeometrica.h"
+#include "../Model/SemiCirculo.h"
 
 class Programa {
 private:
@@ -23,6 +24,7 @@ public:
     void agregarFigura(float radio);
     void agregarFigura(int base, int altura);
     void agregarFigura(int lado, int diagonalMayor,int diagonalMenor);
+    void agregarFigura(double Semiradio);
     void dibujarFiguras();
     void dibujarFiguras(int color); //sobrecarga del metodo para dibujar con colores
     void mostrarAreaFigura();
