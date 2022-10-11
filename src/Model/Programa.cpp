@@ -13,6 +13,7 @@ void Programa::inicializarFiguras(){
     vectorFiguras.push_back(new Circulo(5));
     vectorFiguras.push_back(new Rectangulo(10,20));
     vectorFiguras.push_back(new Rombo(5,5,5));
+    vectorFiguras.push_back(new SemiCirculo(5));
 }
 
 void Programa::agregarFigura(int lado){
@@ -31,6 +32,10 @@ void Programa::agregarFigura(int lado, int diagonalMayor,int diagonalMenor){
     vectorFiguras.push_back(new Rombo(lado, diagonalMayor, diagonalMenor));
 }
 
+void Programa::agregarFigura(double Semiradio) {
+    vectorFiguras.push_back(new SemiCirculo(Semiradio));
+}
+
 void Programa::mostrarAreaFigura() {
     float area;
     for(auto & figura : vectorFiguras){
@@ -42,8 +47,8 @@ void Programa::mostrarAreaFigura() {
 
 void Programa::dibujarFiguras(int color) {
     //Recorre el vector y llama al metodo de cada figura con el color
-    for (auto & figura : vectorFiguras) {
-        figura->dibujarFigura(color);
+    for (int i = 0; i < vectorFiguras.size(); i++) {
+        vectorFiguras[i]->dibujarFigura(color);
     }
     system("Color 07"); // Color negro
 }
